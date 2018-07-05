@@ -56,7 +56,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 **From plotting the random selected original training data, a lot of images looks quite dark.**
 
-![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/selected_original.png)
+![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/selected_original.PNG)
 
 **As an example, below is the one image with its respective class number. This is #33: "Turn right ahead" **
 
@@ -80,7 +80,7 @@ With grayscale plot (top: original, bottom: CLAHE with gridsize=4 cliplimit=12):
 
 When plotting the improved images of the original selected training data, the dark images are more visible. So are the valid dataset images.
 
-![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/selected_clahe_gray.png)
+![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/selected_clahe_gray.PNG)
 
 ---
 ### **Step3: Images Augmentation**
@@ -109,7 +109,7 @@ My final model architecture is listed below. **Convolution layer3a is parallel t
 
  (Reference:http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf).
 
-![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/lecun_model.PNG)
+![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/Lecun_model.PNG)
 
 My final model consists of the following layers:
 
