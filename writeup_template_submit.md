@@ -52,15 +52,15 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 **The distribution of training, validation and test data is very similar. That is great. However, the distribution is NOT uniform.**
 
-![alt text](Images/distribute.png)
+![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/distribute.PNG)
 
 **From plotting the random selected original training data, a lot of images looks quite dark.**
 
-![alt text](Images/selected_original.png)
+![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/selected_original.png)
 
 **As an example, below is the one image with its respective class number. This is #33: "Turn right ahead" **
 
-![alt text](Images/random_image_classnum.PNG)
+![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/random_image_classnum.PNG)
 
 ---
 ### **Step2: Image Quality Improvement**
@@ -70,17 +70,17 @@ One way to improve image quality is to improve the contrast of the images with O
 
 With color plot (top: original, bottom: CLAHE with gridsize=4 cliplimit=6):
 
-![alt text](Images/color_clahe.PNG)
+![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/color_clahe.PNG)
 
 With grayscale plot (top: original, bottom: CLAHE with gridsize=4 cliplimit=12):
 
-![alt text](Images/grayscale_clahe.PNG)
+![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/grayscale_clahe.PNG)
 
 **Grayscale generates clearer image than color image through CLAHE, which is also proved by training with CNN models with different CLAHE parameters. Grayscale and CLAHE gridsize=4 cliplimit=12 is used in final design.**
 
 When plotting the improved images of the original selected training data, the dark images are more visible. So are the valid dataset images.
 
-![alt text](Images/selected_clahe_gray.png)
+![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/selected_clahe_gray.png)
 
 ---
 ### **Step3: Images Augmentation**
@@ -93,7 +93,7 @@ With **Rotation**, **Affine transformation** and **Perspective transformation** 
 
 Examples of augmented images are:
 
-![alt text](Images/selected_augmented_gray.PNG)
+![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/selected_augmented_gray.PNG)
 
 Both colored and grayscale versions are tested in modified CNN models below.
 
@@ -109,7 +109,7 @@ My final model architecture is listed below. **Convolution layer3a is parallel t
 
  (Reference:http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf).
 
-![alt text](Images/lecun_model.PNG)
+![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/lecun_model.PNG)
 
 My final model consists of the following layers:
 
@@ -195,7 +195,7 @@ Several key trials with different model architecture and hyperparameters with th
 
 Here are five German traffic signs that I found on the web with their classes on the 1st row, and grayscale equalized image with predicted classes on the 2nd row:
 
-![alt text](Images/prediction.PNG)
+![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/prediction.PNG)
 
 The second image is classified incorrectly. Others are correct. That's probably because the resolution is quite low and it has more features in it compared with other images.  
 
@@ -272,6 +272,6 @@ The code for making predictions on my final model is located in the 11th cell of
 | .02	      			|No vehicles				 				|
 | .015				    |Road work   							|
 
-**Final thoughts: **
+**Final thoughts:**
 * Grayscale and RGB accuracy are comparable in test sets, but grayscale is more reliable with new web images.
 * Training, validation and test sets distribution is highly unbalanced. That might be one reason why the web images accuracy is much less than test set.
