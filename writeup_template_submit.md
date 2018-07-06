@@ -141,13 +141,21 @@ My final model consists of the following layers:
 |Softmax| softmax probability                |
 
  #### 3. Optimizer Hyperparameters
- Adam optimizer is used in the model. The final model hyperparameters are listed as below:
+ Adam optimizer is used in the model. Adaptive Moment Estimation (Adam) optimizer is chosen as it computes adaptive learning rates for each parameter, thus quick to converge. (Ref: http://ruder.io/optimizing-gradient-descent/index.html#adam)
+ 
+ The final model hyperparameters are listed as below:
 
  |Optimizer| Adam|Note|
  |---|---|---|
  |Batchsize|512|Smaller batchsize (32,16) gives higher accuracy in small epochs (10), larger batchsize (256, 512) gives slightly higher accuracy with large Epochs (400)|
  |Epochs|550||
  |Learning Rate|0.0001|usually 0.001, 0.0003 with 200 Epochs can already gives 93% accuracy|
+
+Regarding to accurancy variations with different compbinations of Batchsize and Epochs, the following figure illustrates several runs I have taken: 
+
+![alt text](https://github.com/zoespot/CarND-Traffic-Sign-Classifier-Project/blob/master/Images/accuracy_bz_epochs.PNG)
+
+When Epoch number is small, smaller batch size is better, because large batch size tends to converge too quickly to local minimums. (Ref: https://stats.stackexchange.com/questions/164876/tradeoff-batch-size-vs-number-of-iterations-to-train-a-neural-network). When Epoches increases, batchsize matters less since more epochs help the optimizer jumping out of local minimums as well. Also with more epochs, slightly better results is observed with larger batchsize. It might come from the quicker convergence with larger batchsize. If given more epochs with smaller batchsize, it will converge to similar level of accraucy. 
 
 #### 4. Approach to reach final model and hyperparameters
 
