@@ -1,4 +1,6 @@
 # **Term1 Project2: Traffic Sign Recognition Classifier**
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+
 ---
 ## **Summary**
 * The project builds a convolutional neural network (CNN) to classify German traffic lights, achieved test accuracy **95%.**
